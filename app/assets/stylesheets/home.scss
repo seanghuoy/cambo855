@@ -1,3 +1,31 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.uk-dropdown.my-dropdown{
+	padding: 0px 15px 0;
+}
+
+.uk-offcanvas.uk-active .uk-offcanvas-bar.uk-offcanvas-bar-show {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.uk-nav-offcanvas>li>a {
+    color: #ccc;
+    padding: 10px 15px;
+    border-top: 1px solid rgba(0,0,0,.3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+}
+
+.uk-nav li>a {
+    display: block;
+    text-decoration: none;
+}
+
+.uk-nav-offcanvas .uk-nav-sub {
+    border-top: 1px solid rgba(0,0,0,.3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+}

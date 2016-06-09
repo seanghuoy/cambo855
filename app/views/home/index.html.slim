@@ -1,23 +1,337 @@
 .my-container.uk-container-center style="max-width: 1000px; margin 0 auto;"
-	nav.uk-navbar  data-uk-sticky="{clasactive: 'uk-navbar-attached', top: -100, animation: 'uk-animation-slide-top'}"
-		a.uk-navbar-brand href="#" Khema24
-		ul.uk-navbar-nav
-			li
-				a href="/" Home
-			li
-				a href="/" Service
-			li
-				a href="/" Company profile 
-			li
-				a href="/" Contact us
-		#offcanvas.uk-offcanvas
-			uk-offcanvas-bar
-				ul.uk-nav.uk-nav-offcanvas
-					li
-						a href="/" Home
-					li
-						a href="/" Service
-					li
-						a href="/" Company profile 
-					li
-						a href="/" Contact us
+	/ header
+	nav.uk-navbar
+		a.uk-navbar-toggle.uk-visible-small href="#" data-uk-offcanvas="{target:'#menu-offcanvas'}" 
+		a.uk-navbar-brand.uk-navbar-center.uk-visible-small href="#" Cambo855
+		a.uk-navbar-brand.uk-hidden-small href="#" Cambo855
+		ul.uk-navbar-nav.uk-visible-large-medium.uk-hidden-small 
+			li.uk-parent data-uk-dropdown="{mode:'hover'}"
+			  a href=""  Drama
+			  .uk-dropdown.my-dropdown.uk-dropdown-navbar
+			    ul.uk-nav.uk-nav-navbar
+			      li
+			        a href="" Khmer
+			      li
+			        a href="" Thia
+			      li
+			        a href="" Korean
+
+			li.uk-parent data-uk-dropdown="{mode:'hover'}"
+			  a href=""  Movie
+			  .uk-dropdown.my-dropdown.uk-dropdown-navbar
+			    ul.uk-nav.uk-nav-navbar
+			      li
+			        a href="" Khmer
+			      li
+			        a href="" Thia
+			      li
+			        a href="" Korean
+			li.uk-parent data-uk-dropdown="{mode:'hover'}"
+			  a href=""  Comedy
+			  .uk-dropdown.my-dropdown.uk-dropdown-navbar
+			    ul.uk-nav.uk-nav-navbar
+			      li
+			        a href="" Pheak Mi 
+			      li
+			        a href="" Koy
+			      li
+			        a href="" Mr. Bean
+			li.uk-parent data-uk-dropdown="{mode:'hover'}"
+			  a href=""  Music
+			  .uk-dropdown.my-dropdown.uk-dropdown-navbar
+			    ul.uk-nav.uk-nav-navbar
+			      li
+			        a href="" Audio
+			      li
+			        a href="" MV
+			li.uk-parent data-uk-dropdown="{mode:'hover'}"
+			  a href=""  TV Show
+			  .uk-dropdown.my-dropdown.uk-dropdown-navbar
+			    ul.uk-nav.uk-nav-navbar
+			      li
+			        a href="" Boxing
+			      li
+			        a href="" Cha Cha Cha
+			li.uk-parent data-uk-dropdown="{mode:'hover'}"
+			  a href=""  Other
+			  .uk-dropdown.my-dropdown.uk-dropdown-navbar
+			    ul.uk-nav.uk-nav-navbar
+			      li
+			        a href="" Facebook clip
+			      li
+			        a href="" From website
+
+	/ content
+	br
+	.uk-grid.uk-grid-medium data-uk-grid-margin=""
+		.uk-width-large-1-6.uk-width-medium-1-3.uk-width-1-3
+			a href="/sub_parent_categories/4"
+				.category_box style="background-color: #89B733;"
+					img.category_image src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/29/297/297995/royal-diamond-logo-f.jpg?1420976493"
+					p.category_name.text-center
+						| COMPUTERS
+		.uk-width-large-1-6.uk-width-medium-1-3.uk-width-1-3
+			a href="/sub_parent_categories/4"
+				.category_box style="background-color: #89B733;"
+					img.category_image src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/29/297/297995/royal-diamond-logo-f.jpg?1420976493"
+					p.category_name.text-center
+						| COMPUTERS
+		.uk-width-large-1-6.uk-width-medium-1-3.uk-width-1-3
+			a href="/sub_parent_categories/4"
+				.category_box style="background-color: #89B733;"
+					img.category_image src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/29/297/297995/royal-diamond-logo-f.jpg?1420976493"
+					p.category_name.text-center
+						| COMPUTERS
+		.uk-width-large-1-6.uk-width-medium-1-3.uk-width-1-3
+			a href="/sub_parent_categories/4"
+				.category_box style="background-color: #89B733;"
+					img.category_image src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/29/297/297995/royal-diamond-logo-f.jpg?1420976493"
+					p.category_name.text-center
+						| COMPUTERS
+		.uk-width-large-1-6.uk-width-medium-1-3.uk-width-1-3
+			a href="/sub_parent_categories/4"
+				.category_box style="background-color: #89B733;"
+					img.category_image src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/29/297/297995/royal-diamond-logo-f.jpg?1420976493"
+					p.category_name.text-center
+						| COMPUTERS
+		.uk-width-large-1-6.uk-width-medium-1-3.uk-width-1-3
+			a href="/sub_parent_categories/4"
+				.category_box style="background-color: #89B733;"
+					img.category_image src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/29/297/297995/royal-diamond-logo-f.jpg?1420976493"
+					p.category_name.text-center
+						| COMPUTERS
+
+
+	/ menu offcanvas
+	#menu-offcanvas.uk-offcanvas
+	  .uk-offcanvas-bar.uk-offcanvas-bar-show
+	    ul.uk-nav.uk-nav-offcanvas.uk-nav-parent-icon data-uk-nav="{multiple:true}" 
+	      li.uk-parent aria-expanded="false" 
+	        a href="#"  Documentation
+	        .uk-hidden style="overflow: hidden; position: relative; height: 0px;" 
+	          ul.uk-nav-sub
+	            li
+	              a href="documentation_get-started.html"  Get started
+	            li
+	              a href="documentation_how-to-customize.html"  How to customize
+	            li
+	              a href="documentation_layouts.html"  Layout examples
+	            li
+	              a href="core.html"  Core
+	            li
+	              a href="components.html"  Components
+	            li
+	              a href="documentation_project-structure.html"  Project structure
+	            li
+	              a href="documentation_less-sass.html"  Less &amp; Sass files
+	            li
+	              a href="documentation_create-a-theme.html"  Create a theme
+	            li
+	              a href="documentation_create-a-style.html"  Create a style
+	            li
+	              a href="documentation_customizer-json.html"  Customizer.json
+	            li
+	              a href="documentation_javascript.html"  JavaScript
+	            li
+	              a href="documentation_custom-prefix.html"  Custom prefix
+	      li.uk-nav-header Core
+	      li.uk-parent aria-expanded="false" 
+	        a href="#" 
+	          i.uk-icon-wrench
+	          | Defaults
+	        .uk-hidden style="overflow:hidden;height:0;position:relative;" 
+	          ul.uk-nav-sub
+	            li
+	              a href="base.html"  Base
+	            li
+	              a href="print.html"  Print
+	      li.uk-parent.uk-active aria-expanded="false" 
+	        a href="#" 
+	          i.uk-icon-th-large
+	          | Layout
+	        .uk-hidden style="overflow: hidden; position: relative; height: 0px;" 
+	          ul.uk-nav-sub
+	            li
+	              a href="grid.html"  Grid
+	            li
+	              a href="panel.html"  Panel
+	            li
+	              a href="block.html"  Block
+	            li
+	              a href="article.html"  Article
+	            li
+	              a href="comment.html"  Comment
+	            li
+	              a href="utility.html"  Utility
+	            li
+	              a href="flex.html"  Flex
+	            li
+	              a href="cover.html"  Cover
+	      li.uk-parent aria-expanded="false" 
+	        a href="#" 
+	          i.uk-icon-bars
+	          | Navigations
+	        .uk-hidden style="overflow: hidden; position: relative; height: 0px;" 
+	          ul.uk-nav-sub
+	            li
+	              a href="nav.html"  Nav
+	            li
+	              a href="navbar.html"  Navbar
+	            li
+	              a href="subnav.html"  Subnav
+	            li
+	              a href="breadcrumb.html"  Breadcrumb
+	            li
+	              a href="pagination.html"  Pagination
+	            li
+	              a href="tab.html"  Tab
+	            li
+	              a href="thumbnav.html"  Thumbnav
+	      li.uk-parent aria-expanded="false" 
+	        a href="#" 
+	          i.uk-icon-check
+	          | Elements
+	        .uk-hidden style="overflow: hidden; position: relative; height: 0px;" 
+	          ul.uk-nav-sub
+	            li
+	              a href="list.html"  List
+	            li
+	              a href="description-list.html"  Description list
+	            li
+	              a href="table.html"  Table
+	            li
+	              a href="form.html"  Form
+	      li.uk-parent aria-expanded="false" 
+	        a href="#" 
+	          i.uk-icon-folder-open
+	          | Common
+	        .uk-hidden style="overflow:hidden;height:0;position:relative;" 
+	          ul.uk-nav-sub
+	            li
+	              a href="button.html"  Button
+	            li
+	              a href="icon.html"  Icon
+	            li
+	              a href="close.html"  Close
+	            li
+	              a href="badge.html"  Badge
+	            li
+	              a href="alert.html"  Alert
+	            li
+	              a href="thumbnail.html"  Thumbnail
+	            li
+	              a href="overlay.html"  Overlay
+	            li
+	              a href="text.html"  Text
+	            li
+	              a href="column.html"  Column
+	            li
+	              a href="animation.html"  Animation
+	            li
+	              a href="contrast.html"  Contrast
+	      li.uk-parent aria-expanded="false" 
+	        a href="#" 
+	          i.uk-icon-magic
+	          | JavaScript
+	        .uk-hidden style="overflow:hidden;height:0;position:relative;" 
+	          ul.uk-nav-sub
+	            li
+	              a href="dropdown.html"  Dropdown
+	            li
+	              a href="modal.html"  Modal
+	            li
+	              a href="offcanvas.html"  Off-canvas
+	            li
+	              a href="switcher.html"  Switcher
+	            li
+	              a href="toggle.html"  Toggle
+	            li
+	              a href="scrollspy.html"  Scrollspy
+	            li
+	              a href="smooth-scroll.html"  Smooth scroll
+	      li.uk-nav-header Components
+	      li.uk-parent aria-expanded="false" 
+	        a href="#" 
+	          i.uk-icon-th-large
+	          | Layout
+	        .uk-hidden style="overflow:hidden;height:0;position:relative;" 
+	          ul.uk-nav-sub
+	            li
+	              a href="grid-js.html"  Dynamic Grid
+	            li
+	              a href="grid-parallax.html"  Parallax Grid
+	      li.uk-parent aria-expanded="false" 
+	        a href="#" 
+	          i.uk-icon-bars
+	          | Navigations
+	        .uk-hidden style="overflow:hidden;height:0;position:relative;" 
+	          ul.uk-nav-sub
+	            li
+	              a href="dotnav.html"  Dotnav
+	            li
+	              a href="slidenav.html"  Slidenav
+	            li
+	              a href="pagination-js.html"  Dynamic Pagination
+	      li.uk-parent aria-expanded="false" 
+	        a href="#" 
+	          i.uk-icon-folder-open
+	          | Common
+	        .uk-hidden style="overflow:hidden;height:0;position:relative;" 
+	          ul.uk-nav-sub
+	            li
+	              a href="form-advanced.html"  Form advanced
+	            li
+	              a href="form-file.html"  Form file
+	            li
+	              a href="form-password.html"  Form password
+	            li
+	              a href="form-select.html"  Form select
+	            li
+	              a href="placeholder.html"  Placeholder
+	            li
+	              a href="progress.html"  Progress
+	      li.uk-parent aria-expanded="false" 
+	        a href="#" 
+	          i.uk-icon-magic
+	          | JavaScript
+	        .uk-hidden style="overflow:hidden;height:0;position:relative;" 
+	          ul.uk-nav-sub
+	            li
+	              a href="lightbox.html"  Lightbox
+	            li
+	              a href="autocomplete.html"  Autocomplete
+	            li
+	              a href="datepicker.html"  Datepicker
+	            li
+	              a href="htmleditor.html"  HTML editor
+	            li
+	              a href="slider.html"  Slider
+	            li
+	              a href="slideset.html"  Slideset
+	            li
+	              a href="slideshow.html"  Slideshow
+	            li
+	              a href="parallax.html"  Parallax
+	            li
+	              a href="accordion.html"  Accordion
+	            li
+	              a href="notify.html"  Notify
+	            li
+	              a href="search.html"  Search
+	            li
+	              a href="nestable.html"  Nestable
+	            li
+	              a href="sortable.html"  Sortable
+	            li
+	              a href="sticky.html"  Sticky
+	            li
+	              a href="timepicker.html"  Timepicker
+	            li
+	              a href="tooltip.html"  Tooltip
+	            li
+	              a href="upload.html"  Upload
+	      li.uk-nav-divider
+	      li
+	        a href="../showcase/index.html"  Showcase
+	      li
+	        a href="tutorials.html"  Tutorials
