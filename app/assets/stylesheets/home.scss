@@ -29,3 +29,27 @@
     border-top: 1px solid rgba(0,0,0,.3);
     box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
 }
+
+.my_header{
+  height: 85px; 
+  width: 100%; 
+  background-color: #fff;
+  /*background-image: url("/web_images/banner_top.jpg");*/
+  background-image: url(https://cnblogwp.files.wordpress.com/2016/01/media-industry-banner-img.png?w=648);  
+}
+
+.uk-my-custom-icon:before {
+  content: "\f04b";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  font-size: 50px;
+  line-height: 1;
+  font-family: FontAwesome;
+  text-align: center;
+  color: #fff;
+}
