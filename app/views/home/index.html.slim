@@ -1,352 +1,86 @@
-.my-container.uk-container-center style="max-width: 1000px; margin 0 auto; background-color: #fff;"
-  .my_header.uk-hidden-small
-    img style="height: 85px; width: auto; padding: 0px;" src="/logo.png" 
-  / header
-  nav.uk-navbar
-    a.uk-navbar-toggle.uk-visible-small href="#" data-uk-offcanvas="{target:'#menu-offcanvas'}" 
-    a.uk-navbar-brand.uk-navbar-right.uk-visible-small style="padding: 0 5px !important;" href="#"
-      img style="height: 25px; width: auto;" src="/logo.png" 
-    ul.uk-navbar-nav.uk-visible-large-medium.uk-hidden-small 
+=render 'layouts/slider'
+/ Latest_uploaded
+br
+.uk-grid.uk-grid-small data-uk-grid-margin="" 
+  .uk-width-1-2
+    a href="" 
+      h3
+        i.uk-icon-
+          | &nbsp;Recently uploaded
+  .uk-width-1-2
+    ul.uk-pagination.uk-pagination-right
+      li.uk-disabled
+        span
+          i.uk-icon-angle-double-left
+      li.uk-active
+        span 1
       li
-        a href=""  
-          i.uk-icon-home
-            | &nbsp;Home
-      li.uk-parent data-uk-dropdown="{mode:'hover'}"
-        a href=""
-          i.uk-icon-th-large
-          | &nbsp;Drama
-        .uk-dropdown.my-dropdown.uk-dropdown-navbar
-          ul.uk-nav.uk-nav-navbar
-            li
-              a href="" Khmer
-            li
-              a href="" Thia
-            li
-              a href="" Korean
-
-      li.uk-parent data-uk-dropdown="{mode:'hover'}"
-        a href=""  
-          i.uk-icon-film
-            | &nbsp;Movie
-        .uk-dropdown.my-dropdown.uk-dropdown-navbar
-          ul.uk-nav.uk-nav-navbar
-            li
-              a href="" Khmer
-            li
-              a href="" Thia
-            li
-              a href="" Korean
-      li.uk-parent data-uk-dropdown="{mode:'hover'}"
-        a href=""  
-          i.uk-icon-user-secret
-          | &nbsp;Comedy
-        .uk-dropdown.my-dropdown.uk-dropdown-navbar
-          ul.uk-nav.uk-nav-navbar
-            li
-              a href="" Pheak Mi 
-            li
-              a href="" Koy
-            li
-              a href="" Mr. Bean
-      li.uk-parent data-uk-dropdown="{mode:'hover'}"
-        a href="" 
-          i.uk-icon-music
-          | &nbsp;Music
-        .uk-dropdown.my-dropdown.uk-dropdown-navbar
-          ul.uk-nav.uk-nav-navbar
-            li
-              a href="" Audio
-            li
-              a href="" MV
-      li.uk-parent data-uk-dropdown="{mode:'hover'}"
-        a href=""  
-          i.uk-icon-desktop
-          | &nbsp;TV Show
-        .uk-dropdown.my-dropdown.uk-dropdown-navbar
-          ul.uk-nav.uk-nav-navbar
-            li
-              a href="" Boxing
-            li
-              a href="" Cha Cha Cha
-      li.uk-parent data-uk-dropdown="{mode:'hover'}"
-        a href=""  
-          i.uk-icon-video-camera
-            | &nbsp;Other
-        .uk-dropdown.my-dropdown.uk-dropdown-navbar
-          ul.uk-nav.uk-nav-navbar
-            li
-              a href="" Facebook clip
-            li
-              a href="" From website
-    .uk-navbar-flip
-      .uk-navbar-content
-        form.uk-search data-uk-search="" 
-          input.uk-search-field placeholder="search" type="search" 
+        a href="#"  2
+      li
+        a href="#"  3
+      li
+        a href="#"  4
+      li
+        span ...
+      li
+        a href="#"  20
+      li
+        a href="#" 
+          i.uk-icon-angle-double-right
 
 
-
-
-  / content
-  br
-  .uk-grid.uk-grid-medium data-uk-grid-margin=""
-    .uk-width-large-3-4.uk-width-medium-3-4
-      .uk-slidenav-position  data-uk-slideshow="{autoplay:true}"
-        ul.uk-slideshow.uk-overlay-active style="height: 411px;" 
-          li aria-hidden="true" style="animation-duration: 200ms; height: 411px;" 
-            .uk-cover-background.uk-position-cover style="background-image: url(http://komsan.tv/userfiles/image/slideshow/1464233729.4393.jpg);" 
-            canvas height="400" style="width: 100%; height: auto; opacity: 0;" width="800" 
-            .uk-overlay-panel.uk-overlay-background.uk-overlay-fade.uk-flex.uk-flex-center.uk-flex-middle.uk-text-center
-              div
-                h3 Overlay
-                p
-                  | Lorem
-                  a href="#"  ipsum dolor
-                  | sit amet, consetetur sadipscing elitr,
-                  br>/
-                  | sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
-                button.uk-button.uk-button-primary Button
-          li aria-hidden="true" style="animation-duration: 200ms; height: 411px;" 
-            .uk-cover-background.uk-position-cover style="background-image: url(http://komsan.tv/userfiles/image/slideshow/1465272556.9953.jpg);" 
-            canvas height="400" style="width: 100%; height: auto; opacity: 0;" width="800" 
-            .uk-overlay-panel.uk-overlay-background.uk-overlay-top.uk-overlay-slide-top
-              h3 Overlay Top
-              p
-                | Lorem
-                a href="#"  ipsum dolor
-                | sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
-              button.uk-button.uk-button-primary Button
-          li aria-hidden="true" style="animation-duration: 200ms; height: 411px;" 
-            .uk-cover-background.uk-position-cover style="background-image: url(http://eposvox.com/wordpress/wp-content/uploads/2014/03/banner-600x250.jpg);" 
-            canvas height="400" style="width: 100%; height: auto; opacity: 0;" width="800" 
-            .uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-overlay-slide-bottom
-              h3 Overlay Bottom
-              p
-                | Lorem
-                a href="#"  ipsum dolor
-                | sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
-              button.uk-button.uk-button-primary Button
-          li aria-hidden="false" style="animation-duration: 200ms; height: 411px;" 
-            .uk-cover-background.uk-position-cover style="background-image: url(https://cbsx1075lasvegas.files.wordpress.com/2012/10/10-18-muse-kxte-banner-600-x-250.jpg);" 
-            canvas height="400" style="width: 100%; height: auto; opacity: 0;" width="800" 
-            .uk-overlay-panel.uk-overlay-background.uk-overlay-left.uk-overlay-slide-left.uk-width-1-4
-              h3 Overlay Left
-              p
-                | Lorem
-                a href="#"  ipsum dolor
-                | sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
-              button.uk-button.uk-button-primary Button
-          li aria-hidden="true" style="animation-duration: 200ms; height: 411px;" 
-            .uk-cover-background.uk-position-cover style="background-image: url(http://diymusician.cdbaby.com/wp-content/uploads/2013/09/SONG-Banner-600x250.png);" 
-            canvas height="400" style="width: 100%; height: auto; opacity: 0;" width="800" 
-            .uk-overlay-panel.uk-overlay-background.uk-overlay-right.uk-overlay-slide-right.uk-width-1-4
-              h3 Overlay Right
-              p
-                | Lorem
-                a href="#"  ipsum dolor
-                | sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
-              button.uk-button.uk-button-primary Button
-        a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-previous data-uk-slideshow-item="previous" href="#" style="color: rgba(255),255,255,0.4)" 
-        a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-next data-uk-slideshow-item="next" href="#" style="color: rgba(255),255,255,0.4)" 
-    .uk-width-large-1-4.uk-width-medium-1-4.uk-hidden-small
-      h3 Latest uploads
-      a href="/"
-        img src="https://d1a6a9r46cnyll.cloudfront.net/ba869352744a03e89f24bf87a972bf91b83c4b89/687474703a2f2f7777772e636f646e617574732e636f6d2f7468656d65732f68616c6f2f707265766965772f726576696577732e706e67"
-  .uk-grid.uk-grid-small data-uk-grid-margin="" 
+  -@entertenment.each do |e|
     .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover data-uk-modal="{target:'#modal-1'}" 
+      .uk-thumbnail.uk-overlay-hover 
         figure.uk-overlay
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
+          img alt="" src="#{e.image.url}"
           figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
           a.uk-position-cover href="#" 
       #modal-1.uk-modal
         .uk-modal-dialog.uk-modal-dialog-lightbox
           a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
+          img alt="" src="#{e.image.url}"
+      h5.uk-margin-bottom-remove.uk-margin-top-remove  
+        = e.name
+/ Popular_moives
+hr
+.uk-grid.uk-grid-small data-uk-grid-margin="" 
+  .uk-width-1-2
+    a href="" 
+      h3
+        i.uk-icon-
+          | &nbsp;Popular moives
+  .uk-width-1-2
+    ul.uk-pagination.uk-pagination-right
+      li.uk-disabled
+        span
+          i.uk-icon-angle-double-left
+      li.uk-active
+        span 1
+      li
+        a href="#"  2
+      li
+        a href="#"  3
+      li
+        a href="#"  4
+      li
+        span ...
+      li
+        a href="#"  20
+      li
+        a href="#" 
+          i.uk-icon-angle-double-right
+
+  -@entertenment.each do |e|
     .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover data-uk-modal="{target:'#modal-2'}" 
+      .uk-thumbnail.uk-overlay-hover 
         figure.uk-overlay
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-          a.uk-position-cover href="#" 
-      #modal-2.uk-modal
-        .uk-modal-dialog.uk-modal-dialog-lightbox
-          a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-    .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover data-uk-modal="{target:'#modal-3'}" 
-        figure.uk-overlay
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-          a.uk-position-cover href="#" 
-      #modal-3.uk-modal
-        .uk-modal-dialog.uk-modal-dialog-lightbox
-          a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-    .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover data-uk-modal="{target:'#modal-4'}" 
-        figure.uk-overlay
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-          a.uk-position-cover href="#" 
-      #modal-3.uk-modal
-        .uk-modal-dialog.uk-modal-dialog-lightbox
-          a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-    .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover data-uk-modal="{target:'#modal-1'}" 
-        figure.uk-overlay
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
+          img alt="" src="#{e.image.url}"
           figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
           a.uk-position-cover href="#" 
       #modal-1.uk-modal
         .uk-modal-dialog.uk-modal-dialog-lightbox
           a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-    .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover data-uk-modal="{target:'#modal-2'}" 
-        figure.uk-overlay
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-          a.uk-position-cover href="#" 
-      #modal-2.uk-modal
-        .uk-modal-dialog.uk-modal-dialog-lightbox
-          a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-    .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover data-uk-modal="{target:'#modal-3'}" 
-        figure.uk-overlay
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-          a.uk-position-cover href="#" 
-      #modal-3.uk-modal
-        .uk-modal-dialog.uk-modal-dialog-lightbox
-          a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-    .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover data-uk-modal="{target:'#modal-4'}" 
-        figure.uk-overlay
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-          a.uk-position-cover href="#" 
-      #modal-3.uk-modal
-        .uk-modal-dialog.uk-modal-dialog-lightbox
-          a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-    .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover data-uk-modal="{target:'#modal-2'}" 
-        figure.uk-overlay
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-          a.uk-position-cover href="#" 
-      #modal-2.uk-modal
-        .uk-modal-dialog.uk-modal-dialog-lightbox
-          a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-    .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover data-uk-modal="{target:'#modal-3'}" 
-        figure.uk-overlay
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-          a.uk-position-cover href="#" 
-      #modal-3.uk-modal
-        .uk-modal-dialog.uk-modal-dialog-lightbox
-          a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-    .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover data-uk-modal="{target:'#modal-4'}" 
-        figure.uk-overlay
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-          a.uk-position-cover href="#" 
-      #modal-3.uk-modal
-        .uk-modal-dialog.uk-modal-dialog-lightbox
-          a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-
-    .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover data-uk-modal="{target:'#modal-4'}" 
-        figure.uk-overlay
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-          a.uk-position-cover href="#" 
-      #modal-3.uk-modal
-        .uk-modal-dialog.uk-modal-dialog-lightbox
-          a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="http://komsan.tv/images/covers/1467177008.8835.jpg"
-  / footer
-  .uk-grid data-uk-grid-margin="margin auto 0;" 
-    .uk-width-medium-1-1.uk-row-first
-      .uk-panel.uk-panel-box.uk-text-center
-        p
-          |  COPYRIGHT © 2016 Entertenment | Relaxing Feeling. ALL RIGHTS RESERVED
-
-
-
-  / menu offcanvas
-  #menu-offcanvas.uk-offcanvas
-    .uk-offcanvas-bar
-      ul.uk-nav.uk-nav-offcanvas.uk-nav-parent-icon data-uk-nav="{ multiple: true }" 
-        li.uk-parent
-          a href="#" 
-            i.uk-icon-th-large
-            | &nbsp;Drama
-          ul.uk-nav-sub
-            li
-              a href="" Khmer
-            li
-              a href="" Thia
-            li
-              a href="" Korean
-        li.uk-parent
-          a href="#" 
-            i.uk-icon-film
-            | &nbsp;Movie
-          ul.uk-nav-sub
-            li
-              a href="" Khmer
-            li
-              a href="" Thia
-            li
-              a href="" Korean
-        li.uk-parent
-          a href="#" 
-            i.uk-icon-user-secret
-            | &nbsp;Comedy
-          ul.uk-nav-sub
-            li
-              a href="" Pheak Mi 
-            li
-              a href="" Neay Koy
-            li
-              a href="" Mr. Bean
-        li.uk-parent
-          a href="#" 
-            i.uk-icon-music
-            | &nbsp;Music
-          ul.uk-nav-sub
-            li
-              a href="" MV
-            li
-              a href="" Audio
-        li.uk-parent
-          a href="#" 
-            i.uk-icon-desktop
-            | &nbsp;TV Show
-          ul.uk-nav-sub
-            li
-              a href="" The Voice Cambodia
-            li
-              a href="" Boxing
-        li.uk-parent
-          a href="#" 
-            i.uk-icon-video-camera
-            | &nbsp;Other
-          ul.uk-nav-sub
-            li
-              a href="" Facebook clip
-            li
-              a href="" Specail clib
-        li
-          a href="showcase/index.html"  
-            i.uk-icon-info-circle
-            | &nbsp;about us
+          img alt="" src="#{e.image.url}"
+      h5.uk-margin-bottom-remove.uk-margin-top-remove  
+        = e.name

@@ -1,0 +1,154 @@
+.my_header.uk-hidden-small
+  a href="#{root_path}" 
+    img style="height: 85px; width: auto;" src="/logo.png" 
+/ header
+nav.uk-navbar
+  a.uk-navbar-toggle.uk-visible-small href="#" data-uk-offcanvas="{target:'#menu-offcanvas'}" 
+  a.uk-navbar-brand.uk-navbar-right.uk-visible-small style="padding: 0 5px !important;" href="#{root_path}"
+    img style="height: 25px; width: auto;" src="/logo.png" 
+  ul.uk-navbar-nav.uk-visible-large-medium.uk-hidden-small 
+    li
+      a href=""  
+        i.uk-icon-home
+          | &nbsp;
+    li.uk-parent data-uk-dropdown="{mode:'hover'}"
+      a href=""
+        i.uk-icon-th-large
+        | &nbsp;Drama
+      .uk-dropdown.my-dropdown.uk-dropdown-navbar
+        ul.uk-nav.uk-nav-navbar
+          li
+            a href="" Khmer
+          li
+            a href="" Thia
+          li
+            a href="" Korean
+
+    li.uk-parent data-uk-dropdown="{mode:'hover'}"
+      a href=""  
+        i.uk-icon-film
+          | &nbsp;Movie
+      .uk-dropdown.my-dropdown.uk-dropdown-navbar
+        ul.uk-nav.uk-nav-navbar
+          li
+            a href="" Khmer
+          li
+            a href="" Thia
+          li
+            a href="" Korean
+    li.uk-parent data-uk-dropdown="{mode:'hover'}"
+      a href=""  
+        i.uk-icon-user-secret
+        | &nbsp;Comedy
+      .uk-dropdown.my-dropdown.uk-dropdown-navbar
+        ul.uk-nav.uk-nav-navbar
+          li
+            a href="" Pheak Mi 
+          li
+            a href="" Koy
+          li
+            a href="" Mr. Bean
+    li.uk-parent data-uk-dropdown="{mode:'hover'}"
+      a href="" 
+        i.uk-icon-music
+        | &nbsp;Music
+      .uk-dropdown.my-dropdown.uk-dropdown-navbar
+        ul.uk-nav.uk-nav-navbar
+          li
+            a href="" Audio
+          li
+            a href="" MV
+    li.uk-parent data-uk-dropdown="{mode:'hover'}"
+      a href=""  
+        i.uk-icon-desktop
+        | &nbsp;TV Show
+      .uk-dropdown.my-dropdown.uk-dropdown-navbar
+        ul.uk-nav.uk-nav-navbar
+          li
+            a href="" Boxing
+          li
+            a href="" Cha Cha Cha
+    li.uk-parent data-uk-dropdown="{mode:'hover'}"
+      a href=""  
+        i.uk-icon-video-camera
+          | &nbsp;Other
+      .uk-dropdown.my-dropdown.uk-dropdown-navbar
+        ul.uk-nav.uk-nav-navbar
+          li
+            a href="" Facebook clip
+          li
+            a href="" From website
+  .uk-navbar-flip
+    .uk-navbar-content
+      form.uk-search data-uk-search="" 
+        input.uk-search-field placeholder="search" type="search" 
+
+/ menu offcanvas
+#menu-offcanvas.uk-offcanvas
+  .uk-offcanvas-bar
+    ul.uk-nav.uk-nav-offcanvas.uk-nav-parent-icon data-uk-nav="{ multiple: true }" 
+      li.uk-parent
+        a href="#" 
+          i.uk-icon-th-large
+          | &nbsp;Drama
+        ul.uk-nav-sub
+          li
+            a href="" Khmer
+          li
+            a href="" Thia
+          li
+            a href="" Korean
+      li.uk-parent
+        a href="#" 
+          i.uk-icon-film
+          | &nbsp;Movie
+        ul.uk-nav-sub
+          li
+            a href="" Khmer
+          li
+            a href="" Thia
+          li
+            a href="" Korean
+      li.uk-parent
+        a href="#" 
+          i.uk-icon-user-secret
+          | &nbsp;Comedy
+        ul.uk-nav-sub
+          li
+            a href="" Pheak Mi 
+          li
+            a href="" Neay Koy
+          li
+            a href="" Mr. Bean
+      li.uk-parent
+        a href="#" 
+          i.uk-icon-music
+          | &nbsp;Music
+        ul.uk-nav-sub
+          li
+            a href="" MV
+          li
+            a href="" Audio
+      li.uk-parent
+        a href="#" 
+          i.uk-icon-desktop
+          | &nbsp;TV Show
+        ul.uk-nav-sub
+          li
+            a href="" The Voice Cambodia
+          li
+            a href="" Boxing
+      li.uk-parent
+        a href="#" 
+          i.uk-icon-video-camera
+          | &nbsp;Other
+        ul.uk-nav-sub
+          li
+            a href="" Facebook clip
+          li
+            a href="" Specail clib
+      li
+        a href="showcase/index.html"  
+          i.uk-icon-info-circle
+          | &nbsp;about us
+          

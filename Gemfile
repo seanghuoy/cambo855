@@ -35,7 +35,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # css package
 gem 'slim', '~> 3.0', '>= 3.0.7'
 gem "uikit-sass-rails"
-
+gem 'inherited_resources', '~> 1.6'
+gem 'simple_form'
+gem 'nested_form'
+gem 'paperclip'
+gem 'country_select'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
