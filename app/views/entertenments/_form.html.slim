@@ -21,52 +21,55 @@ javascript:
 .uk-form.uk-form-horizontal
 	= simple_form_for @entertenment do |f|  
 		.uk-grid.uk-grid-medium
-			.uk-width-medium-2-10.uk-width-small-4-10.uk-width-1-2
+			.uk-width-medium-2-10.uk-width-small-3-10.uk-width-1-1
 				-if action_name.to_sym == :edit
-					=f.input :image , id: 'image', input_html: { accept: "image/*", onchange: "readURL(this);", style: "display: none;"}, label: "<strong data-toggle='tooltip' data-placement='top'> Image </strong> <br><div class=capture_box_admin> <img src='#{@entertenment.image.url}' class='pre-before-upload product_image'></div>".html_safe, label_html: {style: "width: 100%;"}
+					=f.input :image , id: 'image', input_html: { accept: "image/*", onchange: "readURL(this);", style: "display: none;"}, label: "<strong data-toggle='tooltip' data-placement='top'> Image </strong> <br><div class=capture_box_admin> <img src='#{@entertenment.image.url}' class='pre-before-upload product_image'></div>".html_safe, label_html: {style: "width: 50%;"}
 				-else
-					=f.input :image , id: 'image', input_html: { accept: "image/*", onchange: "readURL(this);", style: "display: none;"}, label: "<strong data-toggle='tooltip' data-placement='top'> Image </strong> <br><div class=capture_box_admin> <img src='http://www.themeparkfinds.com/images/camera_large.png' class='pre-before-upload product_image'></div>".html_safe, label_html: {style: "width: 100%;"} 
-		.uk-form-row
-			label.uk-form-label for=""  Movie Country
-			.uk-form-controls
-				= f.association :category, :include_blank => false, class: 'uk-button uk-form-select', label: false
-		.uk-form-row
-			label.uk-form-label for=""  Movie Type
-			.uk-form-controls
-				= f.association :sub_category, :include_blank => false, class: 'uk-button uk-form-select', label: false
-		.uk-form-row
-			label.uk-form-label for=""  Name
-			.uk-form-controls
-				= f.input :name, label: false
-		.uk-form-row
-			label.uk-form-label for=""  Entertenment_url
-			.uk-form-controls
-				= f.input :entertenment_url, label: false
-		.uk-form-row
-			label.uk-form-label for=""  Genres
-			.uk-form-controls
-				= f.input :genres, label: false
-		.uk-form-row
-			label.uk-form-label for=""  Runtime
-			.uk-form-controls
-				= f.input :runtime, label: false
-		.uk-form-row
-			label.uk-form-label for=""  Director
-			.uk-form-controls
-				= f.input :director, label: false
-		.uk-form-row
-			label.uk-form-label for=""  Stars
-			.uk-form-controls
-				= f.input :stars, label: false
-		.uk-form-row
-			label.uk-form-label for=""  Country
-			.uk-form-controls
-				=f.input :country, collection: ["Khmer", "Thia"], label: false
-		.uk-form-row
-			label.uk-form-label for=""  Description
-			.uk-form-controls
-				=f.text_area :description, :cols => 80, :rows => 8, label: false
-		.uk-form-row
-			label.uk-form-label for=""  Action
-			.uk-form-controls
-				button.uk-button.uk-button-primary type="submit" Save
+					=f.input :image , id: 'image', input_html: { accept: "image/*", onchange: "readURL(this);", style: "display: none;"}, label: "<strong data-toggle='tooltip' data-placement='top'> Image </strong> <br><div class=capture_box_admin> <img src='http://www.themeparkfinds.com/images/camera_large.png' class='pre-before-upload product_image'></div>".html_safe, label_html: {style: "width: 50%;"} 
+			br
+			br
+			.uk-width-medium-8-10.uk-width-small-7-10.uk-width-1-1
+				.uk-form-row
+					label.uk-form-label for=""  Movie Country
+					.uk-form-controls
+						= f.association :category, :include_blank => false, class: 'uk-button uk-form-select', label: false
+				.uk-form-row
+					label.uk-form-label for=""  Movie Type
+					.uk-form-controls
+						= f.association :sub_category, :include_blank => false, class: 'uk-button uk-form-select', label: false
+				.uk-form-row
+					label.uk-form-label for=""  Name
+					.uk-form-controls
+						= f.input :name, label: false
+				.uk-form-row
+					label.uk-form-label for=""  Entertenment_url
+					.uk-form-controls
+						= f.input :entertenment_url, label: false
+				.uk-form-row
+					label.uk-form-label for=""  Genres
+					.uk-form-controls
+						= f.input :genres, label: false
+				.uk-form-row
+					label.uk-form-label for=""  Runtime
+					.uk-form-controls
+						= f.input :runtime, label: false
+				.uk-form-row
+					label.uk-form-label for=""  Director
+					.uk-form-controls
+						= f.input :director, label: false
+				.uk-form-row
+					label.uk-form-label for=""  Stars
+					.uk-form-controls
+						= f.input :stars, label: false
+				.uk-form-row
+					label.uk-form-label for=""  Country
+					.uk-form-controls
+						=f.input :country, collection: ["Khmer", "Thia"], label: false
+				.uk-form-row
+					label.uk-form-label for=""  Description
+					.uk-form-controls
+						=f.text_area :description, :cols => 80, :rows => 8, label: false
+				.uk-form-row
+					label.uk-form-label for=""  Action
+					.uk-form-controls
+						button.uk-button.uk-button-primary type="submit" Save

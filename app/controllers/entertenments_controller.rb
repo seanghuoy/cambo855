@@ -31,6 +31,11 @@ class EntertenmentsController < ApplicationController
     redirect_to entertenments_path
 	end
 
+	def show
+		@entertenment = Entertenment.find(params[:id])
+		@entertenments = Entertenment.all
+	end
+
 
 	def entertenment_params
 	  params.require(:entertenment).permit(:name, :entertenment_url, :genres, :runtime, :director, :stars, :country, :description, :image, :category_id, :sub_category_id, :sorted_on)

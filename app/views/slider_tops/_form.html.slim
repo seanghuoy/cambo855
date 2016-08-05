@@ -1,0 +1,51 @@
+javascript:
+	$(function(){
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			var x = document.createElement("INPUT");
+			x.setAttribute("type", "file");
+			x.setAttribute("id", "dynamic_input_type");
+			reader.onload = function (e) {
+				$("label[for='" + input.id + "']").find('img').attr('src', e.target.result);
+				var compress = jic.compress($("label[for='" + input.id + "']").find('img')[0], input.files[0], 90, "jpeg").src
+				//$("#product_image_data_uri").val(compress)
+			}
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+
+.uk-form.uk-form-horizontal
+	= simple_form_for @slider_top do |f|  
+		.uk-grid.uk-grid-medium
+			.uk-width-medium-2-10.uk-width-small-3-10.uk-width-1-1
+				-if action_name.to_sym == :edit
+					=f.input :image , id: 'image', input_html: { accept: "image/*", onchange: "readURL(this);", style: "display: none;"}, label: "<strong data-toggle='tooltip' data-placement='top'> image </strong> <br><div class=capture_box_admin> <img src='#{@slider_top.image.url}' class='pre-before-upload product_image'></div>".html_safe, label_html: {style: "width: 50%;"}
+				-else
+					=f.input :image , id: 'image', input_html: { accept: "image/*", onchange: "readURL(this);", style: "display: none;"}, label: "<strong data-toggle='tooltip' data-placement='top'> image </strong> <br><div class=capture_box_admin> <img src='http://www.themeparkfinds.com/images/camera_large.png' class='pre-before-upload product_image'></div>".html_safe, label_html: {style: "width: 50%;"} 
+			br
+			br
+			.uk-width-medium-8-10.uk-width-small-7-10.uk-width-1-1
+				.uk-form-row
+					label.uk-form-label for=""  Name
+					.uk-form-controls
+						= f.input :name, label: false
+				.uk-form-row
+					label.uk-form-label for=""  Slider url
+					.uk-form-controls
+						= f.input :slider_url, label: false
+				.uk-form-row
+					label.uk-form-label for=""  Sorted on
+					.uk-form-controls
+						= f.input :sorted_on, label: false
+				.uk-form-row
+					label.uk-form-label for=""  Description
+					.uk-form-controls
+						=f.text_area :description, :cols => 80, :rows => 8, label: false
+				.uk-form-row
+					label.uk-form-label for=""  Action
+					.uk-form-controls
+						button.uk-button.uk-button-primary type="submit" Save

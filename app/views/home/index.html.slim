@@ -31,17 +31,18 @@ br
 
   -@entertenment.each do |e|
     .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover 
-        figure.uk-overlay
-          img alt="" src="#{e.image.url}"
-          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-          a.uk-position-cover href="#" 
-      #modal-1.uk-modal
-        .uk-modal-dialog.uk-modal-dialog-lightbox
-          a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="#{e.image.url}"
-      h5.uk-margin-bottom-remove.uk-margin-top-remove  
-        = e.name
+      a href="#{entertenment_path(e)}"
+        .uk-thumbnail.uk-overlay-hover 
+          figure.uk-overlay
+            img alt="" src="#{e.image.url}"
+            figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
+            a.uk-position-cover href="#{entertenment_path(e)}" 
+        #modal-1.uk-modal
+          .uk-modal-dialog.uk-modal-dialog-lightbox
+            a.uk-modal-close.uk-close.uk-close-alt href="" 
+            img alt="" src="#{e.image.url}"
+        h5.uk-margin-bottom-remove.uk-margin-top-remove  
+          = e.name
 / Popular_moives
 hr
 .uk-grid.uk-grid-small data-uk-grid-margin="" 
@@ -70,17 +71,17 @@ hr
       li
         a href="#" 
           i.uk-icon-angle-double-right
-
   -@entertenment.each do |e|
     .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      .uk-thumbnail.uk-overlay-hover 
-        figure.uk-overlay
-          img alt="" src="#{e.image.url}"
-          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-          a.uk-position-cover href="#" 
-      #modal-1.uk-modal
-        .uk-modal-dialog.uk-modal-dialog-lightbox
-          a.uk-modal-close.uk-close.uk-close-alt href="" 
-          img alt="" src="#{e.image.url}"
-      h5.uk-margin-bottom-remove.uk-margin-top-remove  
-        = e.name
+      a href="#{entertenment_path(e)}"
+        .uk-thumbnail.uk-overlay-hover 
+          figure.uk-overlay
+            img alt="" src="#{e.image.url}"
+            figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
+            a.uk-position-cover href="#{entertenment_path(e)}" 
+        #modal-1.uk-modal
+          .uk-modal-dialog.uk-modal-dialog-lightbox
+            a.uk-modal-close.uk-close.uk-close-alt href="" 
+            img alt="" src="#{e.image.url}"
+        h5.uk-margin-b
+          = e.name
