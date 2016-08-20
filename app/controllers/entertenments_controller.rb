@@ -7,7 +7,7 @@ class EntertenmentsController < ApplicationController
 	end
 
 	def create
-		@entertenment = Entertenment.new(entertenment_params)
+		@entertenment = Entertenment.new(permitted_params)
 	  @entertenment.save
 	  redirect_to entertenments_path
 	end
@@ -18,7 +18,7 @@ class EntertenmentsController < ApplicationController
 
 	def update
 	  @entertenment = Entertenment.find(params[:id])
-	  @entertenment.update(entertenment_params)
+	  @entertenment.update(permitted_params)
 
 	  flash.notice = "Article '#{@entertenment.name}' Updated!"
 
@@ -34,10 +34,5 @@ class EntertenmentsController < ApplicationController
 	def show
 		@entertenment = Entertenment.find(params[:id])
 		@entertenments = Entertenment.all
-	end
-
-
-	def entertenment_params
-	  params.require(:entertenment).permit(:name, :entertenment_url, :genres, :runtime, :director, :stars, :country, :description, :image, :category_id, :sub_category_id, :sorted_on)
 	end
 end

@@ -1,31 +1,63 @@
-.uk-grid.uk-grid-small data-uk-grid-margin=""  
-	.uk-width-1-8
-		h3.page-header
-			|All Category
-	    .pull-left
-	    	=link_to "New Category", new_category_path, class: 'btn btn-info btn-xs'
-		br
-		br    
-		table.table
-			thead
-	  		tr
-	  			th.uk-width1-4 Name
-	  			th.uk-width1-6 Description
-	  			th.uk-width1-2 Actions
-  			-@categories.each do |c|
-	  			tr
-		  			td.uk-width1-4= c.name
-		  			td.uk-width1-6= c.description
-		  			td.uk-width1-2.btn-group role="group"
-		  				= link_to 'Edit', edit_category_path(c), class: 'btn btn-warning btn-xs'
-		  				= link_to 'Delete', category_path(c), method: :delete, data: { confirm: "Are you sure to delete this Category ?" }, class: 'btn btn-danger btn-xs'
-br
-br
-br
-br
-br
-br
-br
-br
-br
-br
+.uk-grid.uk-grid-small data-uk-grid-margin="" 
+	.uk-width-10-10
+		.uk-overflow-container
+			table.uk-table.uk-table-condensed
+				thead
+					tr
+						th Image
+						th Name
+						/ th Genres
+						th Runtime
+						/ th Director
+						th Stars
+						th Entertenment type
+						th Entertenment of
+						th Actions
+				tbody
+					-@entertenment_category.each do |c|
+						tr
+							td 
+								img style="height: 40px;" src="#{c.image.url}"
+							td = c.name
+							/ td = c.genres
+							td = c.runtime
+							/ td = c.director
+							td = c.stars
+							td = c.category.name
+							td = c.sub_category.name
+							td.uk-button-group
+								= link_to 'Edit', edit_entertenment_path(c), class: 'uk-button uk-button-small uk-button-warning'
+								= link_to 'Delete', entertenment_path(c), method: :delete, data: { confirm: "Are you sure to delete this entertenment ?" }, class: 'uk-button uk-button-small uk-button-danger'
+		
+/ .uk-grid.uk-grid-small data-uk-grid-margin=""  
+/   .uk-width-1-8
+/     h3.page-header
+/       |All Category
+/       br
+/       .pull-left
+/         =link_to "New Category", new_category_path, class: 'uk-button uk-button-small uk-button-primary'
+/     br    
+/     table.table
+/       thead
+/         tr
+/           th.uk-width-1-4.uk-text-left Name
+/           th.uk-width-1-2.uk-text-left Description
+/           th.uk-width-1-6.uk-text-left Actions
+/         -Category.all.each do |c|
+/           tr
+/             td.uk-width-1-4.uk-text-left = c.name
+/             td.uk-width-1-2.uk-text-left = c.description
+/             td.uk-width-1-6.uk-text-left
+/               .btn-group role="group"
+/                 = link_to 'Edit', edit_category_path(c), class: 'uk-button uk-button-small uk-button-warning'
+/                 = link_to 'Delete', category_path(c), method: :delete, data: { confirm: "Are you sure to delete this Category ?" }, class: 'uk-button uk-button-small uk-button-danger'
+/ br
+/ br
+/ br
+/ br
+/ br
+/ br
+/ br
+/ br
+/ br
+/ br

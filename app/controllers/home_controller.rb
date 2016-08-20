@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   def index
-  	@entertenment = Entertenment.all
   	@slider_tops = SliderTop.all
   end
 

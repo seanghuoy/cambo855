@@ -1,0 +1,62 @@
+.uk-grid.uk-grid-small data-uk-grid-margin="" 
+	.uk-width-10-10
+		.uk-overflow-container
+			table.uk-table.uk-table-condensed
+				thead
+					tr
+						th Image
+						th Name
+						/ th Genres
+						th Runtime
+						/ th Director
+						th Stars
+						th Entertenment type
+						th Entertenment of
+						th Actions
+				tbody
+					-@entertenment_sub_category.each do |c|
+						tr
+							td 
+								img style="height: 40px;" src="#{c.image.url}"
+							td = c.name
+							/ td = c.genres
+							td = c.runtime
+							/ td = c.director
+							td = c.stars
+							td = c.category.name
+							td = c.sub_category.name
+							td.uk-button-group
+								= link_to 'Edit', edit_entertenment_path(c), class: 'uk-button uk-button-small uk-button-warning'
+								= link_to 'Delete', entertenment_path(c), method: :delete, data: { confirm: "Are you sure to delete this entertenment ?" }, class: 'uk-button uk-button-small uk-button-danger'
+/ .uk-grid.uk-grid-small data-uk-grid-margin=""  
+/ 	.uk-width-1-8
+/ 		h3.page-header
+/ 			|All Sub Category
+/ 			br
+/ 	    .pull-left
+/ 	    	=link_to "New Category", new_sub_category_path, class: 'uk-button uk-button-small uk-button-primary'
+/ 		br    
+/ 		table.table.uk-text-left
+/ 			thead
+/ 				tr
+/ 					th.uk-width-1-4 Name
+/ 					th.uk-width-1-2 Description
+/ 					th.uk-width-1-6 Actions
+/ 			-SubCategory.all.each do |sc|
+/ 				tr
+/ 					td.uk-width-1-4 = sc.name
+/ 					td.uk-width-1-2 = sc.description
+/ 					td.uk-width-1-6
+/ 						.btn-group role="group"
+/ 							= link_to 'Edit', edit_sub_category_path(sc), class: 'uk-button uk-button-small uk-button-warning'
+/ 							= link_to 'Delete', sub_category_path(sc), method: :delete, data: { confirm: "Are you sure to delete this Sub Category ?" }, class: 'uk-button uk-button-small uk-button-danger'
+/ br
+/ br
+/ br
+/ br
+/ br
+/ br
+/ br
+/ br
+/ br
+/ br

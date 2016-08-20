@@ -8,7 +8,7 @@ class SliderTopsController < ApplicationController
 	end
 
 	def create
-		@slider_top = SliderTop.new(slider_top_params)
+		@slider_top = SliderTop.new(permitted_params)
 		@slider_top.save
 		redirect_to slider_tops_path
 	end
@@ -19,7 +19,7 @@ class SliderTopsController < ApplicationController
 
 	def update
 		@slider_top = SliderTop.find(params[:id])
-		@slider_top.update(slider_top_params)
+		@slider_top.update(permitted_params)
 		flash.notice = "Article '#{@slider_top.name}' Updated!"
 		redirect_to slider_tops_path
 	end
@@ -34,8 +34,5 @@ class SliderTopsController < ApplicationController
 		@slider_top = SliderTop.find(params[:id])
 		@slider_tops = SliderTop.all
 	end
-
-	def slider_top_params
-		params.require(:slider_top).permit(:name, :slider_url, :sorted_on, :description, :image)
-	end
+	
 end

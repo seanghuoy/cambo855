@@ -7,7 +7,7 @@ class SubCategoriesController < ApplicationController
 		@sub_category = SubCategory.new
 	end
 	def create
-		@sub_category = SubCategory.new(sub_category_params)
+		@sub_category = SubCategory.new(permitted_params)
 		@sub_category.save
 		redirect_to sub_categories_path
 	end
@@ -18,21 +18,21 @@ class SubCategoriesController < ApplicationController
 
 	def update
 	  @sub_category = SubCategory.find(params[:id])
-	  @sub_category.update(sub_category_params)
+	  @sub_category.update(permitted_params)
 
 	  flash.notice = "Article '#{ @sub_categoryname}' Updated!"
 
 	  redirect_to sub_categories_path
 	end
 
+	def show
+		@sub_category = SubCategory.find(params[:id])
+		@entertenment_sub_category = @sub_category.entertenments
+	end
+
 	def destroy
 		@sub_category = SubCategory.find(params[:id])
     @sub_category.destroy
     redirect_to sub_categories_path
-	end
-
-
-	def sub_category_params
-		params.require(:sub_category).permit(:name, :description, :sorted_on, :category_id)
 	end
 end

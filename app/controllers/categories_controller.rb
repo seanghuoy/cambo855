@@ -7,9 +7,14 @@ class CategoriesController < ApplicationController
 	end
 
 	def create
-		@category = Category.new(category_params)
+		@category = Category.new(permitted_params)
 	  @category.save
 	  redirect_to categories_path
+	end
+
+	def show
+		@category = Category.find(params[:id])
+		@entertenment_category = @category.entertenments
 	end
 
 	def edit
@@ -18,7 +23,7 @@ class CategoriesController < ApplicationController
 
 	def update
 	  @category = Category.find(params[:id])
-	  @category.update(category_params)
+	  @category.update(permitted_params)
 
 	  flash.notice = "Article '#{@category.name}' Updated!"
 
@@ -30,10 +35,4 @@ class CategoriesController < ApplicationController
     @category.destroy
     redirect_to categories_path
 	end
-
-
-	def category_params
-	  params.require(:category).permit(:name, :description, :sorted_on)
-	end
-	
 end
