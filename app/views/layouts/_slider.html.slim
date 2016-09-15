@@ -2,13 +2,13 @@
 br
 .uk-grid.uk-grid-small data-uk-grid-margin=""
 	.uk-width-large-2-3.uk-width-medium-2-3
-		.uk-slidenav-position style="border: 1px solid #eee;" data-uk-slideshow="{autoplay:true}"
-			ul.uk-slideshow.uk-overlay-active style="height: 411px;"
+		.uk-slidenav-position style="border: 1px solid #eee; background-color: #333;" data-uk-slideshow="{autoplay:true}"
+			ul.uk-slideshow.uk-overlay-active
 				-@slider_tops.each do |s|
 					-if @slider_tops.first == s 
-						li aria-hidden="true" style="animation-duration: 200ms; height: 411px;" 
+						li aria-hidden="true" style="animation-duration: 200ms; height: 100%;" 
 							.uk-cover-background.uk-position-cover style="background-image: url(#{s.image.url});" 
-							canvas height="360" style="width: 100%; height: auto; opacity: 0;" width="800" 
+							canvas height="360px" style="width: 100%; height: auto; opacity: 0;" width="800" 
 							.uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-overlay-slide-bottom
 								div
 									h3.uk-hidden-small = s.name
@@ -18,9 +18,9 @@ br
 									  i.uk-icon-play
 									  |  Watch now
 					-else
-						li aria-hidden="true" style="animation-duration: 200ms; height: 411px;" 
+						li aria-hidden="true" style="animation-duration: 200ms; height: 100%;" 
 							.uk-cover-background.uk-position-cover style="background-image: url(#{s.image.url});" 
-							canvas height="360" style="width: 100%; height: auto; opacity: 0;" width="800" 
+							canvas height="360px" style="width: 100%; height: auto; opacity: 0;" width="800" 
 							.uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-overlay-slide-bottom
 								div
 									h3.uk-hidden-small = s.name

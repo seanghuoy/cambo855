@@ -43,15 +43,6 @@ ActiveRecord::Schema.define(version: 20160805085821) do
     t.integer  "sub_category_id"
   end
 
-  create_table "silders", force: :cascade do |t|
-    t.string   "name"
-    t.text     "slider_url"
-    t.integer  "sorted_on"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "slider_tops", force: :cascade do |t|
     t.string   "image_file_name"
     t.string   "image_content_type"
@@ -63,15 +54,6 @@ ActiveRecord::Schema.define(version: 20160805085821) do
     t.string   "description"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-  end
-
-  create_table "sliders", force: :cascade do |t|
-    t.string   "name"
-    t.text     "slider_url"
-    t.integer  "sorted_on"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "sub_categories", force: :cascade do |t|
