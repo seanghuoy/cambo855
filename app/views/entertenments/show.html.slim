@@ -13,43 +13,7 @@ br
 		h4.uk-margin-bottom-remove.uk-margin-top-remove  = "Description: #{@entertenment.description}"
 	.uk-width-large-1-3.uk-width-medium-1-3.uk-hidden-small
 		h4.uk-text-danger Latest movie
-		.uk-list
-			a href="/"
-				li style="padding: 7px 0px 7px 7px; border: 1px solid #eee;"
-					.uk-grid.uk-grid-collapse
-						.uk-width-large-2-10.uk-width-medium-2-10 
-							img src="/web_images/sample_movie.jpg" style="height: 60px;"
-						.uk-width-large-8-10.uk-width-medium-8-10
-							dl.uk-description-list-line
-								dt Movie title
-								dd Movie description list defines terms and their corresponding descriptions.
-			a href="/"
-				li style="padding: 7px 0px 7px 7px; border: 1px solid #eee;"
-					.uk-grid.uk-grid-collapse
-						.uk-width-large-2-10.uk-width-medium-2-10 
-							img src="/web_images/sample_movie.jpg" style="height: 60px;"
-						.uk-width-large-8-10.uk-width-medium-8-10
-							dl.uk-description-list-line
-								dt Movie title
-								dd Movie description list defines terms and their corresponding descriptions.
-			a href="/"
-				li style="padding: 7px 0px 7px 7px; border: 1px solid #eee;"
-					.uk-grid.uk-grid-collapse
-						.uk-width-large-2-10.uk-width-medium-2-10 
-							img src="/web_images/sample_movie.jpg" style="height: 60px;"
-						.uk-width-large-8-10.uk-width-medium-8-10
-							dl.uk-description-list-line
-								dt Movie title
-								dd Movie description list defines terms and their corresponding descriptions.
-			a href="/"
-				li style="padding: 7px 0px 7px 7px; border: 1px solid #eee;"
-					.uk-grid.uk-grid-collapse
-						.uk-width-large-2-10.uk-width-medium-2-10 
-							img src="/web_images/sample_movie.jpg" style="height: 60px;"
-						.uk-width-large-8-10.uk-width-medium-8-10
-							dl.uk-description-list-line
-								dt Movie title
-								dd Movie description list defines terms and their corresponding 
+		= render"layouts/latest_entertenment"
 hr
 .uk-grid.uk-grid-small data-uk-grid-margin="" 
   .uk-width-1-1

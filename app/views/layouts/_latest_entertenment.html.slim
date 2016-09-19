@@ -1,0 +1,13 @@
+.uk-list
+  - Entertenment.all.first(4).each do |e|
+    a href="#{entertenment_path(e)}"
+      li style="padding: 7px 0px 7px 7px; border: 1px solid #eee;"
+        .uk-grid.uk-grid-collapse
+          .uk-width-large-2-10.uk-width-medium-2-10 
+            img src="#{e.image.url}" style="height: 60px;"
+          .uk-width-large-8-10.uk-width-medium-8-10
+            dl.uk-description-list-line
+              dt = "#{e.name}"
+              dd = truncate(e.description, length: 60)
+    
+
