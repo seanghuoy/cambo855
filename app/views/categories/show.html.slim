@@ -1,63 +1,39 @@
 .uk-grid.uk-grid-small data-uk-grid-margin="" 
-	.uk-width-10-10
-		.uk-overflow-container
-			table.uk-table.uk-table-condensed
-				thead
-					tr
-						th Image
-						th Name
-						/ th Genres
-						th Runtime
-						/ th Director
-						th Stars
-						th Entertenment type
-						th Entertenment of
-						th Actions
-				tbody
-					-@entertenment_category.each do |c|
-						tr
-							td 
-								img style="height: 40px;" src="#{c.image.url}"
-							td = c.name
-							/ td = c.genres
-							td = c.runtime
-							/ td = c.director
-							td = c.stars
-							td = c.category.name
-							td = c.sub_category.name
-							td.uk-button-group
-								= link_to 'Edit', edit_entertenment_path(c), class: 'uk-button uk-button-small uk-button-warning'
-								= link_to 'Delete', entertenment_path(c), method: :delete, data: { confirm: "Are you sure to delete this entertenment ?" }, class: 'uk-button uk-button-small uk-button-danger'
-		
-/ .uk-grid.uk-grid-small data-uk-grid-margin=""  
-/   .uk-width-1-8
-/     h3.page-header
-/       |All Category
-/       br
-/       .pull-left
-/         =link_to "New Category", new_category_path, class: 'uk-button uk-button-small uk-button-primary'
-/     br    
-/     table.table
-/       thead
-/         tr
-/           th.uk-width-1-4.uk-text-left Name
-/           th.uk-width-1-2.uk-text-left Description
-/           th.uk-width-1-6.uk-text-left Actions
-/         -Category.all.each do |c|
-/           tr
-/             td.uk-width-1-4.uk-text-left = c.name
-/             td.uk-width-1-2.uk-text-left = c.description
-/             td.uk-width-1-6.uk-text-left
-/               .btn-group role="group"
-/                 = link_to 'Edit', edit_category_path(c), class: 'uk-button uk-button-small uk-button-warning'
-/                 = link_to 'Delete', category_path(c), method: :delete, data: { confirm: "Are you sure to delete this Category ?" }, class: 'uk-button uk-button-small uk-button-danger'
-/ br
-/ br
-/ br
-/ br
-/ br
-/ br
-/ br
-/ br
-/ br
-/ br
+  br
+  .uk-width-1-2
+    a href="" 
+      h4.uk-margin-bottom-remove = Category.find(params[:id]).name
+  .uk-width-1-2
+    ul.uk-pagination.uk-pagination-right
+      li.uk-disabled
+        span
+          i.uk-icon-angle-double-left
+      li.uk-active
+        span 1
+      li
+        a href="#"  2
+      li
+        a href="#"  3
+      li
+        a href="#"  4
+      li
+        span ...
+      li
+        a href="#"  20
+      li
+        a href="#" 
+          i.uk-icon-angle-double-right
+  -@entertenment_category.each do |c|
+    .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
+      a href="#{entertenment_path(c)}"
+        .uk-thumbnail.uk-overlay-hover 
+          figure.uk-overlay
+            img alt="" src="#{c.image.url}"
+            figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
+            a.uk-position-cover href="#{entertenment_path(c)}" 
+        #modal-1.uk-modal
+          .uk-modal-dialog.uk-modal-dialog-lightbox
+            a.uk-modal-close.uk-close.uk-close-alt href="" 
+            img alt="" src="#{c.image.url}"
+        h5.uk-margin-bottom-remove.uk-margin-top-remove  
+          = c.name

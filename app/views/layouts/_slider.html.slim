@@ -4,7 +4,7 @@ br
 	.uk-width-large-2-3.uk-width-medium-2-3
 		.uk-slidenav-position style="border: 1px solid #eee; background-color: #333;" data-uk-slideshow="{autoplay:true}"
 			ul.uk-slideshow.uk-overlay-active
-				-@slider_tops.each do |s|
+				-@slider_tops.ordered.each do |s|
 					-if @slider_tops.first == s 
 						li aria-hidden="true" style="animation-duration: 200ms; height: 100%;" 
 							.uk-cover-background.uk-position-cover style="background-image: url(#{s.image.url});" 

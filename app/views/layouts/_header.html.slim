@@ -1,5 +1,5 @@
 .my_header.uk-hidden-small
-	a href="/" 
+	a href="#{root_path}" 
 		img style="height: 85px; width: auto;" src="/logo.png" 
 / header
 nav.uk-navbar
@@ -11,13 +11,13 @@ nav.uk-navbar
 			a href="/"  
 				i.uk-icon-home
 					| &nbsp;
-		- Category.all.each do |c|
+		- Category.ordered.each do |c|
 			li.uk-parent data-uk-dropdown="{mode:'hover'}"
 				=link_to "#{c.name}", category_path(c)
 				-if c.sub_categories.present?
 					.uk-dropdown.my-dropdown.uk-dropdown-navbar
 						ul.uk-nav.uk-nav-navbar
-							-c.sub_categories.each do |sub_cat|
+							-c.sub_categories.ordered.each do |sub_cat|
 								li
 									=link_to "#{sub_cat.name}", sub_category_path(sub_cat)
 				-else c.sub_categories.present?
@@ -94,9 +94,24 @@ nav.uk-navbar
 	.uk-navbar-flip
 		.uk-navbar-content
 			form.uk-search data-uk-search="" 
-				input.uk-search-field placeholder="search" type="search" 
+				input.uk-search-field placeholder="search..." type="search" 
 
 / menu offcanvas
+/ #menu-offcanvas.uk-offcanvas
+/ 	.uk-offcanvas-bar
+/ 		ul.uk-nav.uk-nav-offcanvas.uk-nav-parent-icon data-uk-nav="{ multiple: true }" 
+/ 			- Category.ordered.each do |c|
+/ 				li.uk-parent
+/ 					a href="#" = c.name
+/ 					-if c.sub_categories.present?
+/ 						ul.uk-nav-sub
+/ 							-c.sub_categories.ordered.each do |sub_cat|
+/ 								li
+/ 									=link_to "#{sub_cat.name}", sub_category_path(sub_cat)
+/ 					-else c.sub_categories.present?
+/ 						ul.uk-nav-sub
+/ 							li
+/ 								a href="" 
 #menu-offcanvas.uk-offcanvas
 	.uk-offcanvas-bar
 		ul.uk-nav.uk-nav-offcanvas.uk-nav-parent-icon data-uk-nav="{ multiple: true }" 
