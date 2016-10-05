@@ -4,6 +4,10 @@ class Entertenment < ActiveRecord::Base
   belongs_to :category
   belongs_to :sub_category
 
+  # def self.popular_entertenments
+  #   most_hit(nil)
+  # end
+
   def self.permitted_params
     [:name, :entertenment_url, :genres, :runtime, :director, :stars, :country, :description, :image, :category_id, :sub_category_id, :sorted_on]
   end
