@@ -34,6 +34,10 @@ javascript:
 					.uk-form-controls
 						= f.association :category, :include_blank => false, class: 'uk-button uk-form-select', label: false, input_html: { onchange: "show_child_select_parent(this.value, #{root_path + 'get_sub_categories/'}, '#entertenment_sub_category_id')" }
 				.uk-form-row
+					label.uk-form-label for=""  Image Path
+					.uk-form-controls
+						= f.input :image_path, label: false
+				.uk-form-row
 					label.uk-form-label for=""  Movie Type
 					.uk-form-controls
 						= f.association :sub_category, :include_blank => false, class: 'uk-button uk-form-select', label: false

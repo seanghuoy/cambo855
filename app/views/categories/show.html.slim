@@ -28,12 +28,12 @@
       a href="#{entertenment_path(c)}"
         .uk-thumbnail.uk-overlay-hover 
           figure.uk-overlay
-            img alt="" src="#{c.image.url}"
+            img alt="" src="#{c.image_path}"
             figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
             a.uk-position-cover href="#{entertenment_path(c)}" 
         #modal-1.uk-modal
           .uk-modal-dialog.uk-modal-dialog-lightbox
             a.uk-modal-close.uk-close.uk-close-alt href="" 
-            img alt="" src="#{c.image.url}"
+            img alt="" src="#{c.image_path}"
         h5.uk-margin-bottom-remove.uk-margin-top-remove  
           = c.name

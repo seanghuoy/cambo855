@@ -7,7 +7,7 @@ br
 				-@slider_tops.ordered.each do |s|
 					-if @slider_tops.first == s 
 						li aria-hidden="true" style="animation-duration: 200ms; height: 100%;" 
-							.uk-cover-background.uk-position-cover style="background-image: url(#{s.image.url});" 
+							.uk-cover-background.uk-position-cover style="background-image: url(#{s.image_path});" 
 							canvas height="360px" style="width: 100%; height: auto; opacity: 0;" width="800" 
 							.uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-overlay-slide-bottom
 								div
@@ -19,7 +19,7 @@ br
 									  |  Watch now
 					-else
 						li aria-hidden="true" style="animation-duration: 200ms; height: 100%;" 
-							.uk-cover-background.uk-position-cover style="background-image: url(#{s.image.url});" 
+							.uk-cover-background.uk-position-cover style="background-image: url(#{s.image_path});" 
 							canvas height="360px" style="width: 100%; height: auto; opacity: 0;" width="800" 
 							.uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-overlay-slide-bottom
 								div
