@@ -23,7 +23,7 @@ javascript:
 		.uk-grid.uk-grid-medium
 			.uk-width-medium-2-10.uk-width-small-3-10.uk-width-1-1
 				-if action_name.to_sym == :edit
-					=f.input :image , id: 'image', input_html: { accept: "image/*", onchange: "readURL(this);", style: "display: none;"}, label: "<strong data-toggle='tooltip' data-placement='top'> image </strong> <br><div class=capture_box_admin> <img src='#{@slider_top.image.url}' class='pre-before-upload product_image'></div>".html_safe, label_html: {style: "width: 50%;"}
+					=f.input :image , id: 'image', input_html: { accept: "image/*", onchange: "readURL(this);", style: "display: none;"}, label: "<strong data-toggle='tooltip' data-placement='top'> image </strong> <br><div class=capture_box_admin> <img src='#{@slider_top.image_path}' class='pre-before-upload product_image'></div>".html_safe, label_html: {style: "width: 50%;"}
 				-else
 					=f.input :image , id: 'image', input_html: { accept: "image/*", onchange: "readURL(this);", style: "display: none;"}, label: "<strong data-toggle='tooltip' data-placement='top'> image </strong> <br><div class=capture_box_admin> <img src='http://www.themeparkfinds.com/images/camera_large.png' class='pre-before-upload product_image'></div>".html_safe, label_html: {style: "width: 50%;"} 
 			br

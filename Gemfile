@@ -39,7 +39,7 @@ gem 'inherited_resources', '~> 1.6'
 gem 'simple_form'
 gem 'nested_form'
 gem 'paperclip'
-gem 'aws-sdk', '~> 2.6', '>= 2.6.3'
+# gem 'aws-sdk', '~> 2.6', '>= 2.6.3'
 gem 'country_select'
 #most view or hit
 gem 'punching_bag'
