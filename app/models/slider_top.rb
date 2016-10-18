@@ -8,6 +8,6 @@ class SliderTop < ActiveRecord::Base
   end
   
 	def self.permitted_params
-    [:name, :slider_url, :sorted_on, :description, :image]
+    [:name, :slider_url, :sorted_on, :description, :image, :image_path]
   end
 end

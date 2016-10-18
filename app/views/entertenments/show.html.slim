@@ -5,7 +5,7 @@ br
 		iframe.uk-responsive-width allowfullscreen="" style="width: 100%; height: 302px;" src="#{@entertenment.entertenment_url}"
 		.uk-grid.uk-grid-small data-uk-grid-margin=""
 			.uk-width-large-1-6.uk-width-medium-1-6.uk-width-1-6
-				img style="height: 100px; border: 1px solid #eee; margin-top: 5px;" src="#{@entertenment.image.url}"
+				img style="height: 100px; border: 1px solid #eee; margin-top: 5px;" src="#{@entertenment.image_path}"
 			.uk-width-large-5-6.uk-width-medium-5-6.uk-width-5-6
 				.advertise_above_iframe style="height: 100px; border: 1px solid #fff; margin-top: 5px;" 
 		h5.uk-margin-bottom-remove.uk-margin-top-remove  = "Genres : #{@entertenment.genres}"
@@ -32,12 +32,12 @@ hr
 	    a href="#{entertenment_path(e)}"
 	      .uk-thumbnail.uk-overlay-hover 
 	        figure.uk-overlay
-	          img alt="" src="#{e.image.url}"
+	          img alt="" src="#{e.image_path}"
 	          figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
 	          a.uk-position-cover href="#{entertenment_path(e)}" 
 	      #modal-1.uk-modal
 	        .uk-modal-dialog.uk-modal-dialog-lightbox
 	          a.uk-modal-close.uk-close.uk-close-alt href="" 
-	          img alt="" src="#{e.image.url}"
+	          img alt="" src="#{e.image_path}"
 	      h5.uk-margin-b
 	        = e.name
