@@ -44,12 +44,12 @@ ul.dropdown-menu.my-dropdown-menu > li > a {
 	top:0;
 	right: -8px;
 }
-#myCarousel .list-group-item {
+#myCarousel .list-group-item.my-list-group-carousel {
 	border-radius:0px;
 	cursor:pointer;
 }
 #myCarousel .list-group .active {
-	background-color:#eee;	
+	background-color:#e7e7e7;	
 }
 
 @media (min-width: 992px) { 
@@ -59,4 +59,14 @@ ul.dropdown-menu.my-dropdown-menu > li > a {
 @media (max-width: 991px) { 
 	.carousel-caption p,
 	#myCarousel .list-group {display:none;} 
+}
+
+.list-group-item.my-list-group-carousel.active, .list-group-item.my-list-group-carousel.active:hover, .list-group-item.my-list-group-carousel.active:focus {
+  color: #333;
+  background-color: #e7e7e7;
+  border-color: #e7e7e7;
+}
+
+.list-group-item.my-list-group-carousel{
+	padding: 0px;
 }

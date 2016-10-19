@@ -16,6 +16,7 @@
 @import "mobile";
 @import "tablet";
 @import "bootstrap";
+@import "font-awesome";
 * {
   border-radius: 0 !important;
   -webkit-border-radius: 0 !important;
@@ -25,10 +26,10 @@
 body{
   /*padding-top: 60px;*/
   /*background-image: url("/web_background.png");*/
-  background-color: #f8f8f8;
+  background-color: #eee;
   font-family: FontAwesome;
-
 }
+
 
 textarea, input {
   padding:10px;
@@ -72,4 +73,11 @@ textarea, input {
 .row.no-gutter [class*='col-']:not(:last-child) {
   padding-right: 0 !important;
   padding-left: 0 !important;
+}
+
+.bg-red{
+  background-color: #da314b;
+}
+.f-red{
+  color: #da314b;
 }
