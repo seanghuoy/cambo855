@@ -1,35 +1,136 @@
+.row
+	.col-md-12
+		#myCarousel.carousel.slide data-ride="carousel" 
+			/! Wrapper for slides
+			.carousel-inner
+				.item.active
+					img src="http://placehold.it/760x400/cccccc/ffffff" /
+					.carousel-caption
+						h4
+							a href="#"  Lorem ipsum dolor sit amet consetetur sadipscing
+						p
+							| Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+							a.label.label-primary href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank"  Free Bootstrap Carousel Collection
+				/! End Item
+				.item
+					img src="http://placehold.it/760x400/999999/cccccc" /
+					.carousel-caption
+						h4
+							a href="#"  consetetur sadipscing elitr, sed diam nonumy eirmod
+						p
+							| Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+							a.label.label-primary href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank"  Free Bootstrap Carousel Collection
+				/! End Item
+				.item
+					img src="http://placehold.it/760x400/dddddd/333333" /
+					.carousel-caption
+						h4
+							a href="#"  tempor invidunt ut labore et dolore
+						p
+							| Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+							a.label.label-primary href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank"  Free Bootstrap Carousel Collection
+				/! End Item
+				.item
+					img src="http://placehold.it/760x400/999999/cccccc" /
+					.carousel-caption
+						h4
+							a href="#"  magna aliquyam erat, sed diam voluptua
+						p
+							| Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+							a.label.label-primary href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank"  Free Bootstrap Carousel Collection
+				/! End Item
+				.item
+					img src="http://placehold.it/760x400/dddddd/333333" /
+					.carousel-caption
+						h4
+							a href="#"  tempor invidunt ut labore et dolore magna aliquyam erat
+						p
+							| Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+							a.label.label-primary href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank"  Free Bootstrap Carousel Collection
+				/! End Item
+			/! End Carousel Inner
+			ul.list-group.col-sm-4
+				li.list-group-item.active data-slide-to="0" data-target="#myCarousel" 
+					h4 Lorem ipsum dolor sit amet consetetur sadipscing
+				li.list-group-item data-slide-to="1" data-target="#myCarousel" 
+					h4 consetetur sadipscing elitr, sed diam nonumy eirmod
+				li.list-group-item data-slide-to="2" data-target="#myCarousel" 
+					h4 tempor invidunt ut labore et dolore
+				li.list-group-item data-slide-to="3" data-target="#myCarousel" 
+					h4 magna aliquyam erat, sed diam voluptua
+				li.list-group-item data-slide-to="4" data-target="#myCarousel" 
+					h4 tempor invidunt ut labore et dolore magna aliquyam erat
+			.carousel-controls
+				a.left.carousel-control data-slide="prev" href="#myCarousel" 
+					span.glyphicon.glyphicon-chevron-left
+				a.right.carousel-control data-slide="next" href="#myCarousel" 
+					span.glyphicon.glyphicon-chevron-right
+
+javascript:
+	$(document).ready(function(){
+		
+		var clickEvent = false;
+		$('#myCarousel').carousel({
+			interval:   4000  
+		}).on('click', '.list-group li', function() {
+				clickEvent = true;
+				$('.list-group li').removeClass('active');
+				$(this).addClass('active');   
+		}).on('slid.bs.carousel', function(e) {
+			if(!clickEvent) {
+				var count = $('.list-group').children().length -1;
+				var current = $('.list-group li.active');
+				current.removeClass('active').next().addClass('active');
+				var id = parseInt(current.data('slide-to'));
+				if(count == id) {
+					$('.list-group li').first().addClass('active'); 
+				}
+			}
+			clickEvent = false;
+		});
+	})
+
+	$(window).load(function() {
+			var boxheight = $('#myCarousel .carousel-inner').innerHeight();
+			var itemlength = $('#myCarousel .item').length;
+			var triggerheight = Math.round(boxheight/itemlength+1);
+		$('#myCarousel .list-group-item').outerHeight(triggerheight);
+	});
+			
 /slider
-br
-.uk-grid.uk-grid-small data-uk-grid-margin=""
-	.uk-width-large-2-3.uk-width-medium-2-3
-		.uk-slidenav-position style="border: 1px solid #eee; background-color: #333;" data-uk-slideshow="{autoplay:true}"
-			ul.uk-slideshow.uk-overlay-active
-				-@slider_tops.ordered.each do |s|
-					-if @slider_tops.first == s 
-						li aria-hidden="true" style="animation-duration: 200ms; height: 100%;" 
-							.uk-cover-background.uk-position-cover style="background-image: url(#{s.image_path});" 
-							canvas height="360px" style="width: 100%; height: auto; opacity: 0;" width="800" 
-							.uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-overlay-slide-bottom
-								div
-									h3.uk-hidden-small = s.name
-									h6.uk-visible-small = s.name
-									p.uk-hidden-small  = s.description
-									a.uk-button.uk-button-danger href="#{s.slider_url}" 
-									  i.uk-icon-play
-									  |  Watch now
-					-else
-						li aria-hidden="true" style="animation-duration: 200ms; height: 100%;" 
-							.uk-cover-background.uk-position-cover style="background-image: url(#{s.image_path});" 
-							canvas height="360px" style="width: 100%; height: auto; opacity: 0;" width="800" 
-							.uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-overlay-slide-bottom
-								div
-									h3.uk-hidden-small = s.name
-									h6.uk-visible-small = s.name
-									p.uk-hidden-small  = s.description
-									a.uk-button.uk-button-danger href="#{s.slider_url}" 
-									  i.uk-icon-play
-									  |  Watch now
-			a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-previous data-uk-slideshow-item="previous" href="#" style="color: rgba(255),255,255,0.4)" 
-			a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-next data-uk-slideshow-item="next" href="#" style="color: rgba(255),255,255,0.4)" 
-	.uk-width-large-1-3.uk-width-medium-1-3.uk-hidden-small
-		= render 'layouts/latest_entertenment'
+/ br
+/ .uk-grid.uk-grid-small data-uk-grid-margin=""
+/   .uk-width-large-2-3.uk-width-medium-2-3
+/     .uk-slidenav-position style="border: 1px solid #eee; background-color: #333;" data-uk-slideshow="{autoplay:true}"
+/       ul.uk-slideshow.uk-overlay-active
+/         -@slider_tops.ordered.each do |s|
+/           -if @slider_tops.first == s 
+/             li aria-hidden="true" style="animation-duration: 200ms; height: 100%;" 
+/               .uk-cover-background.uk-position-cover style="background-image: url(#{s.image_path});" 
+/               canvas height="360px" style="width: 100%; height: auto; opacity: 0;" width="800" 
+/               .uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-overlay-slide-bottom
+/                 div
+/                   h3.uk-hidden-small = s.name
+/                   h6.uk-visible-small = s.name
+/                   p.uk-hidden-small  = s.description
+/                   a.uk-button.uk-button-danger href="#{s.slider_url}" 
+/                     i.uk-icon-play
+/                     |  Watch now
+/           -else
+/             li aria-hidden="true" style="animation-duration: 200ms; height: 100%;" 
+/               .uk-cover-background.uk-position-cover style="background-image: url(#{s.image_path});" 
+/               canvas height="360px" style="width: 100%; height: auto; opacity: 0;" width="800" 
+/               .uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-overlay-slide-bottom
+/                 div
+/                   h3.uk-hidden-small = s.name
+/                   h6.uk-visible-small = s.name
+/                   p.uk-hidden-small  = s.description
+/                   a.uk-button.uk-button-danger href="#{s.slider_url}" 
+/                     i.uk-icon-play
+/                     |  Watch now
+/       a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-previous data-uk-slideshow-item="previous" href="#" style="color: rgba(255),255,255,0.4)" 
+/       a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-next data-uk-slideshow-item="next" href="#" style="color: rgba(255),255,255,0.4)" 
+/   .uk-width-large-1-3.uk-width-medium-1-3.uk-hidden-small
+/     = render 'layouts/latest_entertenment'
+
+

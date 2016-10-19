@@ -1,0 +1,26 @@
+/*smart phone true size*/
+@media (max-width: 767px) {
+	.my-nav-mobile-custom {
+	  margin: 0px -15px !important;
+	}
+
+	.navbar-header.navbar-small   {
+	  min-height: 40px !important;
+	}
+
+	.navbar-brand.navbar-brand-xs {
+    float: left;
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 0px;
+    height: 30px;
+	}
+
+	.navbar-toggle.navbar-toggle-xs {
+    margin-right: 15px;
+    padding: 7px 8px;
+    margin-top: 5px;
+    margin-bottom: 0px
+  }
+
+}

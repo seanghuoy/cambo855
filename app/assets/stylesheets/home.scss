@@ -1,35 +1,6 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-.uk-dropdown.my-dropdown{
-	padding: 0px 15px 0;
-}
-
-.uk-offcanvas.uk-active .uk-offcanvas-bar.uk-offcanvas-bar-show {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-}
-
-.uk-nav-offcanvas>li>a {
-    color: #ccc;
-    padding: 10px 15px;
-    border-top: 1px solid rgba(0,0,0,.3);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
-    text-shadow: 0 1px 0 rgba(0,0,0,.5);
-}
-
-.uk-nav li>a {
-    display: block;
-    text-decoration: none;
-}
-
-.uk-nav-offcanvas .uk-nav-sub {
-    border-top: 1px solid rgba(0,0,0,.3);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
-}
-
 .my_header{
   height: 85px; 
   width: 100%; 
@@ -37,18 +8,55 @@
   background-image: url(/web_images/bg_header.png);  
 }
 
-.uk-my-custom-icon:before {
-  content: "\f04b";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  margin-top: -25px;
-  margin-left: -25px;
-  font-size: 50px;
-  line-height: 1;
-  font-family: FontAwesome;
-  text-align: center;
-  color: #fff;
+.my-nav-mobile-custom {
+  margin: 0px -29.6px !important;
+}
+
+.my-nav-mobile-custom>li.dropdown>a.dropdown-toggle {
+  padding: 10px 15px;
+}
+.navbar.navbar-default.navbar-small  {
+  min-height: 40px;
+}
+
+.navbar-default .navbar-toggle.navbar-toggle-xs:hover, .navbar-default .navbar-toggle.navbar-toggle-xs:focus {
+  background-color: transparent;
+}
+
+ul.dropdown-menu.my-dropdown-menu > li > a {
+  padding: 5px 14px;
+}
+
+
+
+#myCarousel .carousel-caption {
+  left:0;
+	right:0;
+	bottom:0;
+	text-align:left;
+	padding:10px;
+	background:rgba(0,0,0,0.6);
+	text-shadow:none;
+}
+
+#myCarousel .list-group {
+	position:absolute;
+	top:0;
+	right: -8px;
+}
+#myCarousel .list-group-item {
+	border-radius:0px;
+	cursor:pointer;
+}
+#myCarousel .list-group .active {
+	background-color:#eee;	
+}
+
+@media (min-width: 992px) { 
+	#myCarousel {padding-right:33.3333%;}
+	#myCarousel .carousel-controls {display:none;} 	
+}
+@media (max-width: 991px) { 
+	.carousel-caption p,
+	#myCarousel .list-group {display:none;} 
 }

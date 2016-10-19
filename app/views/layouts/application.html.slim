@@ -1,13 +1,37 @@
 doctype html
 html
   head
-    title Cambo855
+    title= "Cambo855 - #{ yield(:title).present? ? yield(:title) : 'Enjoying with our ' }"
+    link rel="icon" href="/logo.png" type="image/png"
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+
+    meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"
+    meta name="Description" content="Cambo855 is the entertenments website most poplur in cambodia"
+    meta name="keywords" content="More entertements"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+
+    / Facebook Open Graph
+    noscript
+      ="<meta http-equiv=\"refresh\" content=\"0; URL=/docs/plugins/share-button?_fb_noscript=1\" />"
+    meta property="fb:page_id" content="1595368960731299"
+    meta property="og:title" content="#{ yield(:title).present? ? yield(:title) : 'Phsar Thmey' }"
+    meta property="og:type" content="website"
+    meta property="og:site_name" content="cambo855.herokuapp.com"
+    meta property="og:locale" content="en_US"
+    meta property="og:url" content="#{ yield(:product_url).present? ? yield(:product_url) : 'http://cambo855.herokuapp.com' }"
+    meta property="og:image" content="#{ yield(:product_image).present? ? yield(:product_image) : root_url + 'facebook-image.png' }"
+    meta property="og:description" content="#{ yield(:product_description).present? ? yield(:product_description) : 'Cambo855 is the entertenments website most poplur in cambodia'}"
+
+    link rel="image_src" href="#{ yield(:product_image).present? ? yield(:product_image) : root_url + "facebook-image.png"}"
+    meta name="keywords" content="shopping online ecommerce cambodia buy sell products"
+    meta name="robots" content="noarchive"
+
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
   body
-  	.my-container.uk-container-center style="max-width: 1000px; background-color: #fff; padding:0px 20px 0px 20px; border: 1px solid #ddd;"
-  		=render 'layouts/header'
-    	= yield
+    .container style="max-width: 950px; background-color: #fff; border: 1px solid #ddd;"
+      =render 'layouts/header'
     	=render 'layouts/footer'
+      = yield
+      

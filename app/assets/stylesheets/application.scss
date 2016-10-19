@@ -9,13 +9,67 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
  *= require_tree .
  *= require_self
- *= require uikit
  */
-@import "uikit";
+@import "notebook";
+@import "mobile";
+@import "tablet";
+@import "bootstrap";
+* {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+}
 
 body{
-	background-color: #eee;
+  /*padding-top: 60px;*/
+  /*background-image: url("/web_background.png");*/
+  background-color: #f8f8f8;
+  font-family: FontAwesome;
+
+}
+
+textarea, input {
+  padding:10px;
+  font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+
+.remove-margin-top-bottom{
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.remove-margin-top{
+  margin-top: 0px !important;
+}
+
+.remove-margin-bottom{
+  margin-bottom: 0px !important;
+}
+
+/*I resize padding of bs code*/
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.row {
+  margin-left: -5px !important;
+  margin-right: -5px !important;
+}
+
+/*no padding margin*/
+
+.row.no-gutter {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }

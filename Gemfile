@@ -34,12 +34,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # css package
 gem 'slim', '~> 3.0', '>= 3.0.7'
-gem "uikit-sass-rails"
 gem 'inherited_resources', '~> 1.6'
 gem 'simple_form'
 gem 'nested_form'
 gem 'paperclip'
-# gem 'aws-sdk', '~> 2.6', '>= 2.6.3'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 gem 'country_select'
 #most view or hit
 gem 'punching_bag'

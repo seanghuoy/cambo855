@@ -14,6 +14,6 @@
 //= require jquery_ujs
 //= require jquery_nested_form
 //= require turbolinks
-//= require uikit
 //= require entertenments
+//= require bootstrap
 //= require_tree .
