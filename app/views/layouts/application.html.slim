@@ -30,8 +30,9 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    .container style="max-width: 950px; background-color: #fff; border: 1px solid #ddd;"
+    .container.mycontainer_custom
       =render 'layouts/header'
-    	=render 'layouts/footer'
       = yield
+    .container style="max-width: 950px; background-color: darkred;"
+      =render 'layouts/footer'
       

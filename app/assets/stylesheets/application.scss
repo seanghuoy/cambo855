@@ -23,10 +23,17 @@
   -moz-border-radius: 0 !important;
 }
 
+.container.mycontainer_custom {
+  max-width: 950px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  min-height: 950px;
+}
+
 body{
   /*padding-top: 60px;*/
   /*background-image: url("/web_background.png");*/
-  background-color: #eee;
+  background-color: #f4f4f4;
   font-family: FontAwesome;
 }
 
@@ -76,8 +83,8 @@ textarea, input {
 }
 
 .bg-red{
-  background-color: #da314b;
+  background-color: #cb2027;
 }
 .f-red{
-  color: #da314b;
+  color: #cb2027;
 }

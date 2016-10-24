@@ -1,3 +1,44 @@
 // Place all the styles related to the entertenments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.thumbnail.entertenment-display{
+  box-shadow: 0;
+  transition: box-shadow 1s;
+  border: 1px solid #eee;
+  margin-bottom: 15px !important;
+}
+.thumbnail.entertenment-display:hover{
+  box-shadow: 0 0 5px rgba(160, 4, 4, 1);
+  border: 1px solid rgba(160, 4, 4, 1);
+}
+
+.entertenment_box {
+  background-color: #fff;
+  height: 180px; /*can be anything*/
+  width: 100%; /*can be anything*/
+  display: inline-block;
+  vertical-align: top; /*not required*/
+  position: relative;
+  border-bottom: none;
+}
+
+img.entertenment_image  {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0px;
+}
+.caption.pro_description{
+	padding: 0px !important;
+}
+h5.pro_name{
+  height: 30px;
+}

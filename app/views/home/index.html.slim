@@ -1,22 +1,75 @@
 =render 'layouts/slider'
-h4 Most views
-hr.remove-margin-top
 .row
-  - Entertenment.all.each do |e|
+  .col-md-12
+    h4
+      .fa.fa-caret-square-o-right.f-red 
+      |&nbsp;Most views
+    hr.remove-margin-top
+.row.hidden-sm
+  - Entertenment.all.first(6).each do |e|
     .col-md-2.col-sm-3.col-xs-6
       a href="#{entertenment_path(e)}"
-        .thumbnail
-          img alt="" src="#{e.image_path}"
-        h5.uk-margin-top-remove  
-          = e.name
+        .thumbnail.entertenment-display
+          .entertenment_box
+            img.entertenment_image alt="" src="#{e.image_path}"
+          .caption.pro_description.text-center style="background-color: #fff;"
+            h5.pro_name
+              =truncate(e.name, length: 47)
+.row.visible-sm
+  - Entertenment.first(4).each do |e|
+    .col-md-2.col-sm-3.col-xs-6
+      a href="#{entertenment_path(e)}"
+        .thumbnail.entertenment-display
+          .entertenment_box
+            img.entertenment_image alt="" src="#{e.image_path}"
+          .caption.pro_description.text-center style="background-color: #fff;"
+            h5.pro_name
+              =truncate(e.name, length: 47)
+
 / Latest_uploaded
-h4 Recently uploaded
-hr.remove-margin-top
 .row
-  - Entertenment.all.each do |e|
+  .col-md-12
+    h4
+      .fa.fa-caret-square-o-right.f-red 
+      |&nbsp;Recently uploaded
+    hr.remove-margin-top
+.row.hidden-sm
+  - Entertenment.all.first(6).each do |e|
     .col-md-2.col-sm-3.col-xs-6
       a href="#{entertenment_path(e)}"
-        .thumbnail
-          img alt="" src="#{e.image_path}"
-        h5.uk-margin-top-remove  
-          = e.name
+        .thumbnail.entertenment-display
+          .entertenment_box
+            img.entertenment_image alt="" src="#{e.image_path}"
+          .caption.pro_description.text-center style="background-color: #fff;"
+            h5.pro_name
+              =truncate(e.name, length: 47)
+.row.hidden-sm
+  - Entertenment.all.first(6).each do |e|
+    .col-md-2.col-sm-3.col-xs-6
+      a href="#{entertenment_path(e)}"
+        .thumbnail.entertenment-display
+          .entertenment_box
+            img.entertenment_image alt="" src="#{e.image_path}"
+          .caption.pro_description.text-center style="background-color: #fff;"
+            h5.pro_name
+              =truncate(e.name, length: 47)
+.row.visible-sm
+  - Entertenment.first(4).each do |e|
+    .col-md-2.col-sm-3.col-xs-6
+      a href="#{entertenment_path(e)}"
+        .thumbnail.entertenment-display
+          .entertenment_box
+            img.entertenment_image alt="" src="#{e.image_path}"
+          .caption.pro_description.text-center style="background-color: #fff;"
+            h5.pro_name
+              =truncate(e.name, length: 47)
+.row.visible-sm
+  - Entertenment.first(4).each do |e|
+    .col-md-2.col-sm-3.col-xs-6
+      a href="#{entertenment_path(e)}"
+        .thumbnail.entertenment-display
+          .entertenment_box
+            img.entertenment_image alt="" src="#{e.image_path}"
+          .caption.pro_description.text-center style="background-color: #fff;"
+            h5.pro_name
+              =truncate(e.name, length: 47)

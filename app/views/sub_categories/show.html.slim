@@ -1,18 +1,17 @@
-.uk-grid.uk-grid-small data-uk-grid-margin=""
-  br
-  .uk-width-1-1
-    h4.uk-margin-bottom-remove = SubCategory.find(params[:id]).name 
-  -@entertenment_sub_category.each do |c|
-    .uk-width-large-1-6.uk-width-medium-1-4.uk-width-small-1-3.uk-width-1-2
-      a href="#{entertenment_path(c)}"
-        .uk-thumbnail.uk-overlay-hover 
-          figure.uk-overlay
-            img alt="" src="#{c.image_path}"
-            figcaption.uk-overlay-panel.uk-icon-play.uk-icon-large.uk-my-custom-icon.uk-overlay-background.uk-overlay-fade
-            a.uk-position-cover href="#{entertenment_path(c)}" 
-        #modal-1.uk-modal
-          .uk-modal-dialog.uk-modal-dialog-lightbox
-            a.uk-modal-close.uk-close.uk-close-alt href="" 
-            img alt="" src="#{c.image_path}"
-        h5.uk-margin-bottom-remove.uk-margin-top-remove  
-          = c.name
+.row
+  .col-md-12
+    h4.remove-margin-top 
+      .fa.fa-caret-square-o-right.f-red
+      span
+      |&nbsp;
+      = SubCategory.find(params[:id]).name 
+.row.hidden-sm
+  -@entertenment_sub_category.each do |sc|
+    .col-md-2.col-sm-3.col-xs-6
+      a href="#{entertenment_path(sc)}"
+        .thumbnail.entertenment-display
+          .entertenment_box
+            img.entertenment_image alt="" src="#{sc.image_path}"
+          .caption.pro_description.text-center style="background-color: #fff;"
+            h5.pro_name
+              =truncate(sc.name, length: 47)

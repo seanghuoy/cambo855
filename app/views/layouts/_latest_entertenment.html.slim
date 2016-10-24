@@ -1,13 +1,15 @@
-.uk-list
-  - Entertenment.all.first(4).each do |e|
-    a href="#{entertenment_path(e)}"
-      li style="padding: 7px 0px 7px 7px; border: 1px solid #eee;"
-        .uk-grid.uk-grid-collapse
-          .uk-width-large-2-10.uk-width-medium-2-10 
-            img src="#{e.image_path}" style="height: 60px;"
-          .uk-width-large-8-10.uk-width-medium-8-10
-            dl.uk-description-list-line
-              dt = "#{e.name}"
-              dd = truncate(e.description, length: 60)
-    
-
+.col-md-4
+  h4.remove-margin-top
+    .fa.fa-clock-o.f-red
+    span 
+    |&nbsp; Latest upload
+  ul.list-group.remove-margin-top-bottom
+    - Entertenment.all.first(5).each do |e|
+      li.list-group-item.my-list-group-carousel
+        a href="#{entertenment_path(e)}"
+          .row.no-gutter
+            .col-xs-3 style="border-color: red;"
+              img style="width: 50px; height: 60px;" src="#{e.image_path}" 
+            .col-xs-9 
+              h5.remove-margin-bottom.text-danger = "#{e.name}"
+              h5.remove-margin-top-bottom style="color: #333;" = truncate(e.description, length: 60)
